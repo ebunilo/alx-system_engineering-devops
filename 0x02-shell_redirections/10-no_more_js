@@ -1,2 +1,2 @@
 #!/bin/bash
-find "$(pwd)" -type f -name '*.js' -print -delete
+find . -type f -name '*.js' -delete
