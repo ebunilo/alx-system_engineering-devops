@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ group hello | grep "guillaume" ]; then  chown betty hello fi
+[ ls -l | grep "guillaume" ] then  chown betty hello
