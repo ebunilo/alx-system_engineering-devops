@@ -1,2 +1,2 @@
 #!/bin/bash
-[ ls -l | grep "guillaume" ] then  chown betty hello
+[ $(stat -c '%U' hello) -eq "guillaume" ]  chown betty hello
