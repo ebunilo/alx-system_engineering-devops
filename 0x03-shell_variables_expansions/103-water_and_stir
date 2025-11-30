@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(( $(printf '%s' "$WATER" | tr 'water' '01234' | tr -cd '0-4') + $(printf '%s' "$STIR" | tr 'stir' '01234' | tr -cd '0-4') ))" | tr '01234567' 'bestchol'
+w=$(printf '%s' "$WATER" | tr 'water' '01234' | tr -cd '0-4'); s=$(printf '%s' "$STIR" | tr 'stir' '01234' | tr -cd '0-4'); printf '%s\n' "$(printf '%o' $((5#$w + 5#$s)))" | tr '01234567' 'bestchol'
