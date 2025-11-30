@@ -1,8 +1,2 @@
 #!/bin/bash
-# Encode/decode ROT13 for ASCII using tr. Supports args or stdin.
-
-if [ $# -gt 0 ]; then
-  LC_ALL=C printf "%s\n" "$*" | LC_ALL=C tr 'A-Za-z' 'N-ZA-Mn-za-m'
-else
-  LC_ALL=C tr 'A-Za-z' 'N-ZA-Mn-za-m'
-fi
+LC_ALL=C tr 'A-Za-z' 'N-ZA-Mn-za-m' <<< "${*:-$(cat)}"
